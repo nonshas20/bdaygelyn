@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 
 // Get all image filenames
 const imageFiles = [
@@ -80,13 +79,12 @@ function HeartFormation({
               transform: 'translate(-50%, -50%)'
             }}
           >
-            <Image
+            <img
               src={`/images/${imageFiles[imageIndex]}`}
               alt={`Memory ${imageIndex + 1}`}
               width={45}
               height={45}
               className="rounded-full shadow-lg object-cover border-2 border-white/50"
-              unoptimized
             />
           </motion.div>
         )
